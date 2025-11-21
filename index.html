@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>YourTrain — тренировки</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Telegram WebApp JS -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="app-header">
+      <div class="app-title">
+        <div class="logo-circle">YT</div>
+        <div class="title-text">
+          <h1>YourTrain</h1>
+          <p id="welcome-text">Персональный тренер в Telegram</p>
+        </div>
+      </div>
+      <div class="user-chip" id="user-chip">
+        <!-- сюда подставим имя из Telegram -->
+        <span id="user-name">Загрузка…</span>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="summary-card">
+        <div class="summary-left">
+          <p class="summary-label">Твой статус</p>
+          <h2 class="summary-title" id="summary-title">
+            Персональная программа
+          </h2>
+          <p class="summary-subtitle" id="summary-subtitle">
+            Ответь на пару вопросов в боте, чтобы получить план.
+          </p>
+        </div>
+        <div class="summary-right">
+          <div class="badge" id="summary-badge">
+            ⏳ Не настроено
+          </div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <button class="card" data-action="profile">
+          <div class="card-icon">🧍‍♂️</div>
+          <div class="card-text">
+            <h3>Мой профиль</h3>
+            <p>Цели, параметры, ограничения</p>
+          </div>
+        </button>
+
+        <button class="card" data-action="plan">
+          <div class="card-icon">🧠</div>
+          <div class="card-text">
+            <h3>Мой план</h3>
+            <p>Структура сплита и недель</p>
+          </div>
+        </button>
+
+        <button class="card" data-action="today">
+          <div class="card-icon">💪</div>
+          <div class="card-text">
+            <h3>Тренировка сегодня</h3>
+            <p>Что делать прямо сейчас</p>
+          </div>
+        </button>
+
+        <button class="card" data-action="calendar">
+          <div class="card-icon">📅</div>
+          <div class="card-text">
+            <h3>Календарь</h3>
+            <p>Расписание тренировок</p>
+          </div>
+        </button>
+
+        <button class="card" data-action="nutrition">
+          <div class="card-icon">🍽</div>
+          <div class="card-text">
+            <h3>Питание</h3>
+            <p>Калории, рекомендации, рецепты</p>
+          </div>
+        </button>
+
+        <button class="card" data-action="library">
+          <div class="card-icon">📚</div>
+          <div class="card-text">
+            <h3>Библиотека</h3>
+            <p>Упражнения с GIF/видео</p>
+          </div>
+        </button>
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
